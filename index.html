@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>College Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#featuredColleges">Featured Colleges</a>
+    <a href="#topRatedColleges">Top Rated Colleges</a>
+    <a href="#eamcetColleges">EAMCET Colleges</a>
+  </nav>
+
+  <!-- Home Section -->
+  <header id="home">
+    <h1>🎓 Welcome to College Explorer</h1>
+    <p>Your one-stop platform to explore the best colleges in South India.</p>
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Search for colleges..." />
+      <select id="locationFilter">
+        <option value="">All Locations</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Bengaluru">Bengaluru</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Kochi">Kochi</option>
+        <option value="Coimbatore">Coimbatore</option>
+        <option value="Vijayawada">Vijayawada</option>
+        <option value="Vizag">Vizag</option>
+        <option value="Tirupati">Tirupati</option>
+        <option value="Mysore">Mysore</option>
+      </select>
+      <select id="ratingFilter">
+        <option value="">All Ratings</option>
+        <option value="4.5">4.5+</option>
+        <option value="4.0">4.0+</option>
+        <option value="3.5">3.5+</option>
+      </select>
+      <button id="clearFiltersBtn">Clear Filters</button>
+    </div>
+    <div class="user-profile">
+        <img src="profile.jpg" alt="User Profile" class="profile-pic" />
+        <span class="username">Uday Kumar</span>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="college-section gray-section">
+    <h2>👋 About College Explorer</h2>
+    <p>College Explorer is your go-to platform for discovering top colleges in South India. Whether you’re looking by location, rating, or entrance cutoffs, we’ve got you covered with real-time data and a user-friendly experience. Explore colleges in Andhra Pradesh, Telangana, Tamil Nadu, Karnataka, and Kerala with ease!</p>
+  </section>
+
+  <main>
+    <div id="collegeContainer" class="college-grid">
+      <!-- College cards will be injected here -->
+    </div>
+   
+    <!-- Detailed college info modal -->
+    <div id="collegeDetailsModal" class="modal hidden">
+      <div class="modal-content">
+        <button class="close-btn" onclick="closeCollegeDetails()">&times;</button>
+        <h2 id="modalCollegeName">ABC College</h2>
+        <p id="modalCollegeLocation"><strong>Location:</strong> Hyderabad</p>
+        <p id="modalCollegeRating"><strong>Rating:</strong> 4.5</p>
+        <p id="modalCollegeCutoff"><strong>Cutoff:</strong> EAMCET 500</p>
+        <p id="modalCollegeFee"><strong>Fee:</strong> ₹2,20,000/year</p>
+        <p id="modalCollegeCourses"><strong>Courses:</strong> CSE, ECE, ME, AI/DS</p>
+        <p id="modalCollegeDescription"><strong>Description:</strong> This is a detailed description of the college.</p>
+        <a id="modalCollegeLink" href="#" target="_blank" class="more-info-link">More Info</a>
+      </div>
+    </div>
+
+    <section id="featuredColleges" class="college-section">
+      <h2>🌟 Most Featured Colleges</h2>
+      <div class="college-grid">
+        <!-- Featured colleges will be dynamically added here -->
+      </div>
+    </section>
+  
+    <section id="topRatedColleges" class="college-section">
+      <h2>🏆 Top Rated Colleges</h2>
+      <div class="college-grid">
+        <!-- Top-rated colleges will be dynamically added here -->
+      </div>
+    </section>
+  
+    <section id="eamcetColleges" class="college-section">
+      <h2>📊 EAMCET Based Colleges</h2>
+      <div class="college-grid">
+        <!-- EAMCET-based colleges will be dynamically added here -->
+      </div>
+    </section>
+    
+  </main>
+
+  <footer>
+    <p>© 2025 College Explorer | Built with ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
